@@ -3,16 +3,20 @@ import "./postview.css"
 function Preview(){
   const[data,setdata]=useState()
     
-    useEffect(()=>{
-          fetch("https://todolistaforcousins.onrender.com/blog", {  
+    useEffect(async()=>{
+   const res=await   fetch("https://todolistaforcousins.onrender.com/blog", {  
        method: 'GET',  
        withCredentials: true,  
        crossorigin: true,  
        mode: 'no-cors',     
-     }).then((res)=>{ return res.json()}).then((res)=>{
+     })
+   const t=await res.json()
+   console.log(t)
+   
+//    .then((res)=>{ return res.json()}).then((res)=>{
             
-         console.log(res)
-          })
+//          console.log(res)
+//           })
 //           setdata([
 //             {"name":"Siva",
 //             "location":"Bengaluru",
