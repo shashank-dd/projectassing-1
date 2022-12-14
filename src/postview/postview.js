@@ -8,7 +8,7 @@ function Preview(){
        method: 'GET',  
        withCredentials: true,  
        crossorigin: true,  
-       mode: 'no-cors',     
+       mode: 'cors',     
      })
    const t=await res.json()
    console.log(t)
